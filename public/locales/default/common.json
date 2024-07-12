@@ -1,0 +1,106 @@
+{
+    "globals":{
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "address": "Address",
+        "addressValue": "Square 27 corner",
+        "workHours":"Hours of work",
+        "workHoursValue":"Everyday: 8AM to 12PM",
+        "readMore": "Read More",
+
+        "searchResults": "Search Results"
+    },
+    "header": {
+        "login": "Login",
+        "home": "Home",
+        "blog": "Blog",
+        "shop": "Products",
+        "panel":"Panel",
+        "aboutUs": "About us",
+        "search": "Search",
+        "contactUs": "Contact us",
+        "projects": "Projects"
+    },
+    "footer":{
+        "socialMedia":"Social Media",
+        "company":"Company",
+        "contactUs": "Contact us",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi"
+    },
+    "landingPage":{
+        "mainMotto":{
+            "primary": "Exclusive Agent of QEELIN",
+            "secondary": "Artificial Lift Manufacturing Company",
+            "description": "Pioneer in Arificial Lift Products And Soutions",
+            "button":"Find out more"
+        },
+        "features":{
+            "title":"Features",
+            "description": "Finding best solutions, minimizing client costs"
+        },
+        "honors":{
+            "title": "Honors",
+            "first":"Exclusive agency of an international manufacturer company producing high quility REDA esp units (Qeelin Artificial lift manufacturing company)",
+            "second": "QEELIN brand has been approved and registerd in AVL list of NIOC by Pishro Pars Co",
+            "third": "Appreciate letter of ISTI (Vice-Presidency for Science and Technology)for installing two special high production rate in Sistan deep water wells",
+            "fourth": "Professional International and experienced Iranian personnel",
+            "button":"see works"
+        },
+        "about":{
+            "title":"ABOUT QEELIN",
+            "first":"QEELIN’s workshop covers a floor space of 127,000m2",
+            "second": "QEELIN has 180 employees, which include 40 engineers and 30 professional service technicians",
+            "third": "QEELIN is equipped with dozens of advanced and completed manufacturing equipment, testing and inspection equipment, and has put into place full-fledged manufacturing, management, quality, service, safety and environmental system",
+            "fourth": "So far QEELIN can assemble 5,000 sets of ESP unit annually and can provide customs with safe, reliable and green products and service without any delay",
+            "fifth": "ESP motor have 5 series and 1,272 different specifications; ESP pumps have 6 series and 42 types; ESP protectors have 7 series and 85 different specifications; MLE has 3 series and 20 different specifications; submersible seawater motors cover 5 series and 98 different specifications"
+        },
+        "projects":{
+            "title":"Projects",
+            "first":"Supplying 1 special ESP unit for Vice-Presidency Science and Technology (PERLOOK Co.) (with the responsibility of installation, maintenance repair) on Sistan 2 well. ۹۰۰ HP, 1000KVA, 35000 BPD, 1200m",
+            "second": "Supplying 1 special ESP unit for Vice-Presidency Science and Technology (PERLOOK Co.) (with the responsibility of installation, maintenance repair) on Sistan 1 well. ۶۸۰ HP, 800KVA, 15000 BPD, 2400m",
+            "third": "Repair and service 1 esp unit on Sistan 1 well.",
+            "fourth": "Hold professional Training course about ESP theorical and applied workshop for more than 30 personnel of Vice-Presidency Science and Technology.",
+            "button":"see works"
+        },
+        "crew":{
+            "title":"Crew",
+            "description":"Combination of Professional International and Experienced Local Personnel",
+            "main":"Believing in teamwork, we are cooperating with most famous international and experienced crew while working with local crew experienced in oil/gas industry",
+            "mainDescription":"We respect our clients, so focus on best services from our technical team. They do their job safe, precise and fast. All crew are selected, trained and perform jobs undesupervision of the main manufacturer, so all their jobs and installed equipment are guaranteed by the main manufacture.",
+            "responsiveTitle": "Responsive",
+            "responsiveDescription":"We have experienced local engineers at our main office ready to design and consult clients on technical issues 24 hrs a day. Also our office technical team are connected to the manufacturer for more details if required by clients.",
+            "economicTitle": "Economics and cost savings",
+            "economicDescription": "Our technical team alaways try to minimize costs both in designs and operational issues."
+        },
+        "pishroPars":{
+            "title":"PishroPars",
+            "description":"Professional Installation, Maintenance and Repairing Crew",
+            "main":"Our installation team have wide experience in drilling operation, electrical engineering,mechanical engineering and industrial production. Our team emphasize in safety,precision and speed. We also try to consult our client on yhe field to get best decisions on the location without wasting time."
+        },
+        "subVendors":{
+            "title":"Sub Vendors",
+            "description":"We Cooperate with Famous International Brands",
+            "button":"see works"
+        }
+    },
+    "contactUsPage":{
+        "title":"We are here for you! How can we help?",
+        "namePlaceholder":"Your name...",
+        "emailPlaceholder":"Your email...",
+        "opinionPlaceholder":"Your opinion...",
+        "contactUs":"Contact us",
+        "submit":"Send message"
+    },
+    "projectsPage":{
+        "title":"Projects"
+    },
+    "shopPage":{
+        "title":"Shop"
+    },
+    "blogPage":{
+        "blogTitle":"Blog",
+        "newsTitle":"Latest News",
+        "writtenBy": "Written By",
+        "minsRead": "mins read"
+    }
+}

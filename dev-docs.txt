@@ -1,0 +1,6 @@
+// controling custom Icons
+Custom icons are placed inside tsx components, copied and pasted from figma into a simple mui SvgIcon component.
+The viewbox should be as same as the figma icon, and shouldn't be changed at all.
+To control the dimensions of the icon, just set width and height in its sx Prop. to control the color, change the stroke property of the imported icon.
+don't forget to delete the stroke attribute from the pure icon code!
+-- if any icons had a black weird and retarded shit on it, just put fill: transparent on the path tag.
