@@ -71,7 +71,6 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                         />
                         <Typography
                             sx={{
-                                color: theme.palette.secondary.dark,
                                 fontVariationSettings: "'wght' 600",
                                 fontSize: "0.9rem",
                                 mx: 3,

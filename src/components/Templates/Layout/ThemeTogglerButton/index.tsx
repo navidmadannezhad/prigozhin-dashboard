@@ -1,17 +1,19 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Box, IconButton, useTheme } from "@mui/material";
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import { useSelector, useDispatch } from "react-redux";
+import { setThemeState } from "@redux/slices/commonSlice";
 
 interface ThemeTogglerButtonProps {}
 
 const ThemeTogglerButton: FC<ThemeTogglerButtonProps> = () => {
     const theme = useTheme();
+    const dispatch = useDispatch();
+    const themeState = useSelector((state: any) => state.common.themeState);
 
     const toggleThemeMode = () => {
-        // You can implement your theme toggling logic here using state management or theme provider
-        // For demonstration purposes, we are not toggling the theme here
-        console.log("Toggle theme logic goes here.");
+        themeState === "light" ? dispatch(setThemeState("dark")) : dispatch(setThemeState("light"));
     }
 
     return (

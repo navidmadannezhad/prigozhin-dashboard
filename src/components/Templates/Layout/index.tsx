@@ -21,6 +21,7 @@ const Layout: FC<Props> = ({ children }) => {
                 justifyContent: {
                     lg: "space-between",
                 },
+                backgroundColor: theme => theme.palette.secondary.ultraLight
             }}
         >
             {belowLg ? (

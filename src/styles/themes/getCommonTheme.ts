@@ -10,12 +10,9 @@ import IRANYekanXBold from "@public/fonts/IRANYekanX/normal/IRANYekanX-Bold.woff
 import IRANYekanXExtraBold from "@public/fonts/IRANYekanX/normal/IRANYekanX-ExtraBold.woff"
 import IRANYekanXBlack from "@public/fonts/IRANYekanX/normal/IRANYekanX-Black.woff"
 import IRANYekanXExtraBlack from "@public/fonts/IRANYekanX/normal/IRANYekanX-ExtraBlack.woff"
-
 import type {} from '@mui/x-data-grid/themeAugmentation';
-import { ThemeOptions } from "@mui/material";
-import { lightPalette } from "./palette";
 
-const commonTheme: ThemeOptions = {
+const getCommonTheme = (palette: any) => ({
     direction: "rtl",
     components: {
         MuiCssBaseline: {
@@ -90,20 +87,20 @@ const commonTheme: ThemeOptions = {
 
                 /* for mozilla */
                 *{
-                    scrollbar-color: ${lightPalette.primary.main} ${lightPalette.secondary.main};
+                    scrollbar-color: ${palette.primary.main} ${palette.secondary.main};
                     scrollbar-width: thin;
                 }
 
                 /* for chrome */
                 ::-webkit-scrollbar {
-                  width: 0.5rem;
+                width: 0.5rem;
                 }
                 ::-webkit-scrollbar-track {
-                  background: ${lightPalette.secondary.main};
-                  border-radius: 10px;
+                background: ${palette.secondary.main};
+                border-radius: 10px;
                 }
                 ::-webkit-scrollbar-thumb {
-                    background: ${lightPalette.primary.main};
+                    background: ${palette.primary.main};
                     border-radius: 10px;
                 }
 
@@ -133,6 +130,7 @@ const commonTheme: ThemeOptions = {
                     fontFamily: "IRANYekanXVF",
                     fontWeight: 400,
                     fontVariationSettings: "'wght' 400",
+                    color: palette.secondary.main
                 }
             }
         },
@@ -166,7 +164,7 @@ const commonTheme: ThemeOptions = {
                     overflow: "hidden",
 
                     "& .MuiDataGrid-columnHeaders":{
-                        backgroundColor: lightPalette.secondary.ultraLight
+                        backgroundColor: palette.secondary.ultraLight
                     },
 
                     "& .MuiDataGrid-columnSeparator":{
@@ -176,6 +174,6 @@ const commonTheme: ThemeOptions = {
             }
         }
     }
-}
+})
 
-export default commonTheme;
+export default getCommonTheme;

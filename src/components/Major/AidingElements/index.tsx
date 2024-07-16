@@ -18,7 +18,6 @@ export const HeaderOptionWrapper = styled(Button)<any>(({ theme, active }: any) 
     "& p":{
         fontVariationSettings: "'wght' 600",
         fontSize: "1.1rem",
-        color: active ? theme.palette.secondary.contrastText : theme.palette.secondary.dark,
     }
 }))
 

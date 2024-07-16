@@ -12,6 +12,8 @@ export interface LanguageConfigType {
     path: string;
 }
 
+export type ThemeState = "dark" | "light";
+
 export interface HeaderOption{
     name: string;
     link: any;

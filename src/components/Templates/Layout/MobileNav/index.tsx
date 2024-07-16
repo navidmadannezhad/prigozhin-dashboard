@@ -64,7 +64,6 @@ const MobileNav: FC = () => {
                                                             "& p":{
                                                                 fontVariationSettings: "'wght' 600",
                                                                 fontSize: "1.1rem",
-                                                                color: (theme) => theme.palette.secondary.dark,
                                                             }
                                                         }}
                                                     >

@@ -2,16 +2,14 @@ import { FC } from "react";
 import { headerOptions } from "@configs/settings";
 import Logo from "@public/images/logo.png";
 import type { HeaderOption } from "@models/models";
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Box, styled, Typography, Button } from "@mui/material";
+import { Box, styled, Typography, Button, Accordion, AccordionSummary, AccordionDetails, Grid } from "@mui/material";
 import { HeaderOptionWrapper } from "@components/Major/AidingElements";
 import { ExternalLinkIcon, EarthIcon, LogoutIcon } from "@components/Major/Icons";
 import { useDispatch } from "react-redux";
 import { resetAuthState } from "@redux/slices/authSlice";
+import ThemeTogglerButton from "../ThemeTogglerButton";
 
 const DesktopNav: FC = () => {
     const location = useLocation();
@@ -62,7 +60,6 @@ const DesktopNav: FC = () => {
                                                     "& p": {
                                                         fontVariationSettings: "'wght' 600",
                                                         fontSize: "1.1rem",
-                                                        color: "secondary.dark",
                                                     },
                                                 }}
                                             >
@@ -121,21 +118,24 @@ const DesktopNav: FC = () => {
                     width: "92%",
                 }}
             >
-                <Button
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                    }}
-                >
-                    <EarthIcon />
-                    <a href={import.meta.env.VITE_MAIN_SITE_URL} target="_blank">
-                        <Typography sx={{ fontVariationSettings: "'wght' 600" }}>
-                            مشاهده سایت
-                        </Typography>
-                    </a>
-                    <ExternalLinkIcon />
-                </Button>
+                <Grid container justifyContent="space-between" alignItems="center">
+                    <Button
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                        }}
+                    >
+                        <EarthIcon />
+                        <a href={import.meta.env.VITE_MAIN_SITE_URL} target="_blank">
+                            <Typography sx={{ fontVariationSettings: "'wght' 600" }}>
+                                مشاهده سایت
+                            </Typography>
+                        </a>
+                        <ExternalLinkIcon />
+                    </Button>
+                    <ThemeTogglerButton />
+                </Grid>
                 <ProfileWrapper>
                     <Box
                         sx={{
@@ -149,7 +149,6 @@ const DesktopNav: FC = () => {
                                 sx={{
                                     fontVariationSettings: "'wght' 500",
                                     fontSize: "0.9rem",
-                                    color: "secondary.contrastText",
                                 }}
                             >
                                 مدیر سایت
@@ -158,7 +157,6 @@ const DesktopNav: FC = () => {
                                 sx={{
                                     fontVariationSettings: "'wght' 500",
                                     fontSize: "0.8rem",
-                                    color: "secondary.dark",
                                 }}
                             >
                                 سطح دسترسی: ادمین

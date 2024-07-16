@@ -39,10 +39,13 @@ const MiniReport: FC<Partial<MiniReportProps>> = (_props) => {
     );
 }
 
-const MiniReportWrapper = styled(Grid)(({ theme }) => ({
-    border: `2px solid ${theme.palette.secondary.light}`,
-    boxShadow: theme.palette.secondary.shadow
-}));
+const MiniReportWrapper = styled(Grid)(({ theme }) => {
+    console.log(theme);
+    return {
+        border: `2px solid ${theme.palette.secondary.light}`,
+        boxShadow: theme.palette.secondary.shadow
+    }
+});
 
 const IconWrapper = styled(Grid)(({ theme }) => ({
     boxShadow: `0px 0px 0px 0px ${theme.palette.success.light}, 0px 0px 0px 5px ${theme.palette.success.ultraLight}`,

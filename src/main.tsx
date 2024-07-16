@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "./styles/globals.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import lightTheme from '@styles/themes/lightTheme';
+import lightTheme from '@styles/themes/lightPalette';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -15,6 +15,7 @@ import { Toaster } from "react-hot-toast";
 import { routeOptions } from '@configs/settings';
 import { HeaderOption } from '@models/models';
 import RouteResolver from '@components/Major/RouteResolver';
+import ThemeResolver from '@styles/themes/ThemeResolver';
 
 // Create rtl cache
 const cacheRtl = createCache({
@@ -27,7 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <CacheProvider value={cacheRtl}>
       <ReduxProvider>
         <BrowserRouter>
-          <ThemeProvider theme={lightTheme}>
+          <ThemeResolver>
             <CssBaseline />
             <Toaster />
 
@@ -49,7 +50,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               ))}
             </Routes>
 
-          </ThemeProvider>
+          </ThemeResolver>
         </BrowserRouter>
       </ReduxProvider>
     </CacheProvider>

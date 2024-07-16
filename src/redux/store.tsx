@@ -13,6 +13,7 @@ import {
 import { PersistGate } from "redux-persist/integration/react";
 
 import authSlice from "@redux/slices/authSlice";
+import commonSlice from "@redux/slices/commonSlice";
 
 import { common_api } from "@redux/services/common-services";
 
@@ -24,6 +25,7 @@ const persistConfig = {
 
 const reducer = combineReducers({
   auth: authSlice,
+  common: commonSlice,
   common_api: common_api.reducer,
 });
 
