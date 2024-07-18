@@ -30,6 +30,7 @@ const ThemeTogglerButton: FC<ThemeTogglerButtonProps> = () => {
                     height: "40px",
                     padding: 0,
                 },
+                zIndex: 199
             }}
         >
             <IconButton
