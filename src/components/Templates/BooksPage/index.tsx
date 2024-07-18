@@ -80,11 +80,9 @@ const BooksPage: FC<BooksPageProps> = () => {
                 >
                     <PlusIcon
                         stroke={theme.palette.primary.contrastText}
-                        sx={{ width: "15px", height: "15px" }}
+                        sx={{ width: "15px", height: "15px", mr: 1 }}
                     />
-                    <Typography sx={{ ml: 1 }}>
-                        کتاب جدید
-                    </Typography>
+                    کتاب جدید
                 </Button>
             </Box>
 

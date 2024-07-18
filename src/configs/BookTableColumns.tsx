@@ -27,7 +27,13 @@ const OperationButtons = ({ params }: any) => {
                 <RoundedButton
                     onClick={() => { setBranchModalOpen(true) }}
                 >
-                    <PencilIcon />
+                    <PencilIcon
+                        sx={{
+                            "& path":{
+                                stroke: (theme) => theme.palette.secondary.contrastText
+                            }
+                        }}
+                    />
                 </RoundedButton>
                 <RoundedButton
                     onClick={() => { setDeleteModalOpen(true) }}
@@ -35,7 +41,7 @@ const OperationButtons = ({ params }: any) => {
                     <TrashcanIcon
                         sx={{
                             "& path":{
-                                stroke: (theme) => theme.palette.primary.dark
+                                stroke: (theme) => theme.palette.secondary.contrastText
                             }
                         }}
                     />

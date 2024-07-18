@@ -34,7 +34,7 @@ const DeleteRecordModal: FC<DeleteRecordModalProps> = (props) => {
                     </IconWrapper>
                     <CrossIcon stroke={theme.palette.primary.dark} sx={{ cursor: "pointer" }} onClick={() => { props.setOpen(false) }} />
                 </Grid>
-                <Typography sx={{ fontSize: "1rem", fontVariationSettings: "'wght' 500", color: theme.palette.primary.dark }}>
+                <Typography sx={{ fontSize: "1rem", fontVariationSettings: "'wght' 500" }}>
                     آیا از حذف مورد انتخاب شده اطمینان دارید؟
                 </Typography>
                 <Grid container gap={1} justifyContent="space-between" flexWrap="nowrap">
@@ -42,11 +42,7 @@ const DeleteRecordModal: FC<DeleteRecordModalProps> = (props) => {
                         <Button
                             fullWidth
                             variant="outlined"
-                            color="primary"
-                            sx={{
-                                borderRadius: theme => theme.spacing(2),
-                                py: theme => theme.spacing(2)
-                            }}
+                            color="error"
                             onClick={() => { props.setOpen(false) }}
                         >
                             بازگشت
@@ -56,12 +52,7 @@ const DeleteRecordModal: FC<DeleteRecordModalProps> = (props) => {
                         <Button
                             fullWidth
                             variant="contained"
-                            color="warning"
-                            sx={{
-                                borderRadius: theme => theme.spacing(2),
-                                py: theme => theme.spacing(2)
-                            }}
-                            onClick={deleteRecord}
+                            color="error"
                         >
                             حذف
                         </Button>
