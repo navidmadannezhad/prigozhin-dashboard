@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { PageWrapper } from "@components/Major/AidingElements";
-import { Box, Button, Typography, Grid } from "@mui/material";
+import { Box, Button, Typography, Grid, useMediaQuery } from "@mui/material";
 import { EditIcon, FilterIcon } from "@components/Major/Icons";
 import { TrashcanIcon } from "@components/Major/Icons/TrashcanIcon";
 import { Formik, Form } from "formik";
@@ -14,10 +14,64 @@ import { useSearchParams } from "react-router-dom";
 
 interface NewBookPageProps{}
 
+const Controls = () => {
+    return(
+        <Grid container alignItems="center" justifyContent="space-between" width="unset">
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 1 }}>
+                <Button
+                    color="primary"
+                    variant="contained"
+                    sx={{ borderRadius: (theme) => theme.spacing(1) }}
+                    type="submit"
+                >
+                    <FilterIcon
+                        sx={{ 
+                            mr: 0.5,
+                            width: "20px", 
+                            height: "20px",
+                            stroke: (theme) => theme.palette.primary.contrastText
+                        }}
+                    />
+                    ذخیره
+                </Button>
+                <Button
+                    color="primary"
+                    variant="contained"
+                    sx={{ borderRadius: (theme) => theme.spacing(1) }}
+                >
+                    <EditIcon
+                        sx={{ 
+                            mr: 0.5,
+                            width: "20px", 
+                            height: "20px",
+                            stroke: (theme) => theme.palette.primary.contrastText
+                        }}
+                    />
+                    ذخیره و ایجاد یکی دیگر
+                </Button>
+                <Button
+                    color="warning"
+                    variant="contained"
+                    sx={{ borderRadius: (theme) => theme.spacing(1), width: "40px", minWidth: "unset" }}
+                >
+                    <TrashcanIcon 
+                        sx={{ 
+                            width: "20px", 
+                            height: "20px",
+                            stroke: (theme) => theme.palette.primary.contrastText
+                        }}
+                    />
+                </Button>
+            </Box>
+        </Grid>
+    )
+}
+
 const NewBookPage: FC<NewBookPageProps> = () => {
     const theme = useTheme();
     const params: any = useSearchParams();
     const editMode = params.book_id;
+    const belowLg = useMediaQuery(theme.breakpoints.down("lg"));
 
     const initialValues: any = {
         title: "",
@@ -57,57 +111,31 @@ const NewBookPage: FC<NewBookPageProps> = () => {
                         >
                             اضافه کردن کتاب
                         </Typography> 
-
-                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 3 }}>
-                            <Button
-                                color="primary"
-                                variant="contained"
-                                sx={{ borderRadius: (theme) => theme.spacing(1) }}
-                                type="submit"
-                            >
-                                <FilterIcon
-                                    sx={{ 
-                                        margin: (theme) => `0px ${theme.spacing(0.5)}`,
-                                        width: "20px", 
-                                        height: "20px",
-                                        stroke: (theme) => theme.palette.primary.contrastText
-                                    }}
-                                />
-                                ذخیره
-                            </Button>
-                            <Button
-                                color="primary"
-                                variant="contained"
-                                sx={{ borderRadius: (theme) => theme.spacing(1) }}
-                            >
-                                <EditIcon
-                                    sx={{ 
-                                        margin: (theme) => `0px ${theme.spacing(0.5)}`,
-                                        width: "20px", 
-                                        height: "20px",
-                                        stroke: (theme) => theme.palette.primary.contrastText
-                                    }}
-                                />
-                                ذخیره و ایجاد یکی دیگر
-                            </Button>
-                            <Button
-                                color="warning"
-                                variant="contained"
-                                sx={{ borderRadius: (theme) => theme.spacing(1), width: "40px", minWidth: "unset" }}
-                            >
-                                <TrashcanIcon 
-                                    sx={{ 
-                                        width: "20px", 
-                                        height: "20px",
-                                        stroke: (theme) => theme.palette.primary.contrastText
-                                    }}
-                                />
-                            </Button>
-                        </Box>
+                        {!belowLg && (
+                            <Controls />
+                        )}
                     </Grid>
+
+                    {belowLg && (
+                        <Grid 
+                            container 
+                            sx={{ 
+                                position: "absolute", 
+                                bottom: "0", 
+                                left: "0",
+                                p: 1,
+                                zIndex: 99,
+                                width: "100vw", 
+                                backgroundColor: theme.palette.secondary.light,
+                                boxShadow: "0px -2px 5px rgba(0,0,0,0.1)"
+                            }}
+                        >
+                            <Controls />
+                        </Grid>
+                    )}
                     
                     <Grid container spacing={4} alignItems="flex-start">
-                        <Grid item xs={6} container gap={2}>
+                        <Grid item lg={6} xs={12} container gap={2}>
                             <Grid item xs={12}>
                                 <SimpleInput name="title" label="عنوان" type="text" placeholder="عنوان کتاب" />
                             </Grid>
@@ -126,7 +154,7 @@ const NewBookPage: FC<NewBookPageProps> = () => {
                             <Grid item xs={12}>
                                 <SimpleInput name="thumbnail_alt" label="متن ALT" type="text" placeholder="ALT" />
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={12}>
                                 <SelectInput 
                                     name="category" 
                                     label="دسته‌بندی کتاب"
@@ -135,7 +163,7 @@ const NewBookPage: FC<NewBookPageProps> = () => {
                                     ]}
                                 />
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item xs={12}>
                                 <SelectInput 
                                     name="status" 
                                     label="وضعیت"

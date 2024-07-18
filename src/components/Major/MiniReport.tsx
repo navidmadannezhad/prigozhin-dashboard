@@ -3,6 +3,7 @@ import { styled, Grid, Typography } from "@mui/material";
 import { ArrowAscendingIcon } from "./Icons";
 import RatioHolder from "./RatioHolder";
 import { RatioMode } from "@models/models";
+import { enToFaNum } from "@utils/commonUtils";
 
 interface MiniReportProps {
     title: string;
@@ -32,20 +33,17 @@ const MiniReport: FC<Partial<MiniReportProps>> = (_props) => {
                 <Typography
                     sx={{ fontVariationSettings: "'wght' 700", fontSize: "1.3rem" }}
                 >
-                    286000 تومان
+                    {enToFaNum(286000)} تومان
                 </Typography>
             </Grid>
         </MiniReportWrapper>
     );
 }
 
-const MiniReportWrapper = styled(Grid)(({ theme }) => {
-    console.log(theme);
-    return {
-        border: `2px solid ${theme.palette.secondary.light}`,
-        boxShadow: theme.palette.secondary.shadow
-    }
-});
+const MiniReportWrapper = styled(Grid)(({ theme }) => ({
+    border: `2px solid ${theme.palette.secondary.light}`,
+    boxShadow: theme.palette.secondary.shadow
+}));
 
 const IconWrapper = styled(Grid)(({ theme }) => ({
     boxShadow: `0px 0px 0px 0px ${theme.palette.success.light}, 0px 0px 0px 5px ${theme.palette.success.ultraLight}`,

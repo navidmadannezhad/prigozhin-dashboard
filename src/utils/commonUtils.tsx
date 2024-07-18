@@ -30,3 +30,5 @@ export const getModifiedValues = (values: any, initialValues: any) => {
     })
     return modifiedValues;
 }
+
+export const enToFaNum = (s: number | string): string => String(s).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);

@@ -10,12 +10,12 @@ const darkPalette = {
         ultraLight: "#1C1F23",
         light: "#25292E",
         main: "#ffffff",
-        dark: "#3A3F44",
+        dark: "#ffffff",
         contrastText: "#ffffff",
         shadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.75)"
     },
     warning: {
-        ultraLight: "#3A1C1C",
+        ultraLight: "#574848",
         light: "#5A3D3D",
         main: "#B42318",
         dark: "#7A2D25"

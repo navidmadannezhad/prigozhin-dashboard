@@ -31,20 +31,20 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                 </Box>
             </Box>
 
-            <Grid container sx={{ flexWrap: "nowrap", gap: 3 }}>
-                <Grid item xs={4}>
+            <Grid container spacing={3}>
+                <Grid item md={4} xs={12}>
                     <MiniReport />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4} xs={12}>
                     <MiniReport />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item md={4} xs={12}>
                     <MiniReport />
                 </Grid>
             </Grid>
 
-            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: 3 }}>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 3, maxWidth: 600, width: "100%" }}>
+            <Grid container alignItems="center" justifyContent="space-between" mt={3}>
+                <Grid item container alignItems="center" gap={2} xs={6}>
                     <Typography
                         sx={{
                             fontSize: "1.2rem",
@@ -54,30 +54,17 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                         آخرین سفارش‌ها
                     </Typography>
                     <QuantityHolder quantityTitle="سفارش" quantityValue={23} />
-                    <Box sx={{ maxWidth: 250, width: "100%" }}>
-                        <SearchInput />
-                    </Box>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+                </Grid>
+                <Grid item container alignItems="center" justifyContent="flex-end" gap={3} xs={4}>
                     <Button
-                        sx={{
-                            border: `2px solid ${theme.palette.secondary.light}`,
-                            borderRadius: "8px",
-                        }}
+                        variant="outlined"
+                        color="secondary"
                     >
                         <FilterIcon
                             stroke={theme.palette.secondary.dark}
-                            sx={{ width: "20px", height: "20px" }}
+                            sx={{ width: "20px", height: "20px", mr: 1 }}
                         />
-                        <Typography
-                            sx={{
-                                fontVariationSettings: "'wght' 600",
-                                fontSize: "0.9rem",
-                                mx: 3,
-                            }}
-                        >
-                            فیلترها
-                        </Typography>
+                        فیلترها
                     </Button>
                     <Button
                         sx={{
@@ -94,8 +81,8 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                     >
                         <TrashcanIcon stroke="#fff" sx={{ width: "20px", height: "20px" }} />
                     </Button>
-                </Box>
-            </Box>
+                </Grid>
+            </Grid>
         </PageWrapper>
     );
 };

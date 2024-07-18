@@ -21,9 +21,10 @@ const lightPalette = {
         dark: "#B42318"
     },
     success: {
-        light: "#ECFDF3",
-        main: "#079455",
-        dark: "#079455"
+        ultraLight: "#ECFDF3",
+        light: "#ABEFC6",
+        main: "#067647",
+        dark: "#067647"
     },
     neutral: {
         ultraLight: "#FFFAEB",

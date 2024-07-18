@@ -5,6 +5,10 @@ const getCommonTheme = (palette: any) => ({
     components: {
         MuiCssBaseline: {
             styleOverrides: `
+                *{
+                    transition: all 0.2s;
+                }
+
                 /* for mozilla */
                 *{
                     scrollbar-color: ${palette.primary.main} ${palette.secondary.main};
@@ -34,6 +38,8 @@ const getCommonTheme = (palette: any) => ({
             styleOverrides: {
                 root: {
                     boxShadow: "none",
+                    backgroundColor: palette.secondary.ultraLight,
+                    backgroundImage: 'none',
                     "& .MuiAccordionSummary-content": {
                         margin: "0px"
                     },

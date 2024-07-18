@@ -30,9 +30,11 @@ const SearchInput: FC<SearchInput> = (_props) => {
 
 const CustomInput = styled('input')(({ theme }) => ({
     border: "none",
+    backgroundColor: "unset",
+    color: theme.palette.secondary.contrastText,
     "&:focus":{
         outline: "none"
-    }
+    },
 }))
 
 export default SearchInput;

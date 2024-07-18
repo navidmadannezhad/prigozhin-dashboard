@@ -3,8 +3,8 @@ import { FC } from "react";
 
 export const ArrowDownIcon: FC<SvgIconProps> = (props) => {
     return(
-        <SvgIcon viewBox="0 0 10 10" { ...props }>
-            <path d="M5 1.5V8.5M5 8.5L8.5 5M5 8.5L1.5 5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <SvgIcon viewBox="0 0 12 12" { ...props }>
+            <path d="M6 2.5L6 9.5M6 9.5L9.5 6M6 9.5L2.5 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </SvgIcon>
     )
 }

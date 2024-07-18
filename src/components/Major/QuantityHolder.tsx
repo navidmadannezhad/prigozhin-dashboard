@@ -24,7 +24,6 @@ const QuantityHolder: FC<QuantityHolderProps> = (props) => {
         >
             <Typography
                 sx={{ 
-                    color: theme.palette.primary.main,
                     fontVariationSettings: "'wght' 500",
                 }}
             >
@@ -32,7 +31,6 @@ const QuantityHolder: FC<QuantityHolderProps> = (props) => {
             </Typography>
             <Typography
                 sx={{ 
-                    color: theme.palette.primary.main,
                     fontVariationSettings: "'wght' 500"
                 }}
             >

@@ -79,14 +79,14 @@ const ModalWrapper: FC<ModalWrapperProps> = (props) => {
     )
 }
 
-const StyledModalBox = styled(Box)(({ width }: any) => ({
+const StyledModalBox = styled(Box)((props: any) => ({
     position: 'absolute' as any,
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: `100%`,
-    maxWidth: `${width}px`,
-    backgroundColor: '#fff',
+    maxWidth: `${props.width}px`,
+    backgroundColor: props.theme.palette.secondary.ultraLight,
     padding: "20px",
     borderRadius: "15px",
     boxShadow: "24",

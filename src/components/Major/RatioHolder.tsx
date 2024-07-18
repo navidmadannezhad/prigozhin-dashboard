@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Grid, Typography, useTheme } from "@mui/material";
 import { ArrowDownIcon, ArrowUpIcon } from "./Icons";
 import { RatioMode } from "@models/models";
+import { enToFaNum } from "@utils/commonUtils";
 
 interface RatioHolderProps {
     ratioMode: RatioMode;
@@ -15,14 +16,14 @@ const RatioHolder: FC<RatioHolderProps> = (props) => {
         <Grid
             container
             sx={{
-                px: 2,
-                maxWidth: 100,
+                px: 1,
+                maxWidth: 80,
                 justifyContent: "space-between",
                 alignItems: "center",
-                backgroundColor: props.ratioMode === RatioMode.ASC ? theme.palette.success.light : theme.palette.warning.light,
+                backgroundColor: props.ratioMode === RatioMode.ASC ? theme.palette.success.ultraLight : theme.palette.warning.ultraLight,
                 borderWidth: "3px",
                 borderStyle: "solid",
-                border: theme => `3px solid ${props.ratioMode === RatioMode.ASC ? theme.palette.success.main : theme.palette.warning.main}`,
+                border: theme => `3px solid ${props.ratioMode === RatioMode.ASC ? theme.palette.success.light : theme.palette.warning.light}`,
                 borderRadius: "40px"
             }}
         >
@@ -31,7 +32,7 @@ const RatioHolder: FC<RatioHolderProps> = (props) => {
                     color: props.ratioMode === RatioMode.ASC ? theme.palette.success.dark : theme.palette.warning.dark
                 }}
             >
-                {props.ratioValue}%
+                {enToFaNum(props.ratioValue)}%
             </Typography>
             {props.ratioMode === RatioMode.ASC ? (
                 <ArrowUpIcon

@@ -9,10 +9,10 @@ export const HeaderOptionWrapper = styled(Button)<any>(({ theme, active }: any) 
     transition: "all 0.15s",
     padding: "10px",
     borderRadius: "8px",
-    backgroundColor: active ? theme.palette.secondary.ultraLight : "unset",
+    backgroundColor: active ? theme.palette.secondary.light : "unset",
 
     "&:hover":{
-        backgroundColor: theme.palette.secondary.ultraLight
+        backgroundColor: theme.palette.secondary.light
     },
 
     "& p":{
@@ -49,6 +49,7 @@ export const SimpleInputStyled = styled('input')<any>(({ theme, filled, disabled
     "&:focus":{
         outline: `2px solid ${theme.palette.secondary.dark}`
     },
+    color: theme.palette.secondary.contrastText,
 } as any))
 
 export const ColorInputStyled = styled('input')<any>(({ theme, filled, disabled }: any) => ({
@@ -76,7 +77,8 @@ export const TextareaStyled = styled('textarea')<any>(({ theme, filled, disabled
     "&:focus":{
         outline: `2px solid ${theme.palette.secondary.dark}`
     },
-    resize: "none"
+    resize: "none",
+    color: theme.palette.secondary.contrastText,
 } as any))
 
 export const InputErrorWrapper = styled(Box)(({ theme }) => ({
@@ -153,8 +155,8 @@ export const StyledTab = styled(Tab)<any>(({ theme, filled, disabled }: any) => 
 } as any))
 
 export const IconWrapper = styled(Grid)(({ theme }) => ({
-    boxShadow: `0px 0px 0px 0px ${theme.palette.primary.light}, 0px 0px 0px 5px ${theme.palette.primary.ultraLight}`,
-    backgroundColor: theme.palette.primary.light,
+    boxShadow: `0px 0px 0px 0px ${theme.palette.warning.light}, 0px 0px 0px 10px ${theme.palette.warning.ultraLight}`,
+    backgroundColor: theme.palette.warning.light,
     display: "flex",
     borderRadius: "50%",
     width: "40px",
