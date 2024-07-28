@@ -7,6 +7,7 @@ import SearchInput from "@components/Major/Form/SearchInput";
 import { FilterIcon } from "@components/Major/Icons";
 import { TrashcanIcon } from "@components/Major/Icons/TrashcanIcon";
 import DeleteRecordsModal from "@components/Major/DeleteRecordsModal";
+import SimpleLineChart from "@components/Major/Charts/SimpleLineChart";
 
 interface DashboardPageProps {}
 
@@ -81,6 +82,12 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                     >
                         <TrashcanIcon stroke="#fff" sx={{ width: "20px", height: "20px" }} />
                     </Button>
+                </Grid>
+            </Grid>
+
+            <Grid container>
+                <Grid xs={12} item>
+                    <SimpleLineChart />
                 </Grid>
             </Grid>
         </PageWrapper>
