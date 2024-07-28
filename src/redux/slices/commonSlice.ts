@@ -10,7 +10,7 @@ const initialState: StateType = {
 }
 
 const commonSlice = createSlice({
-  name: 'auth',
+  name: 'common',
   initialState,
   reducers: {
     setThemeState: (state, action) => {
