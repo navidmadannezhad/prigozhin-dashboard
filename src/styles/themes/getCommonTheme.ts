@@ -6,7 +6,8 @@ const getCommonTheme = (palette: any) => ({
         MuiCssBaseline: {
             styleOverrides: `
                 *{
-                    transition: all 0.2s;
+                    transition-duration: 0.2s;
+                    transition-property: background-color, color, box-shadow, border;
                 }
 
                 /* for mozilla */
