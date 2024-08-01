@@ -79,6 +79,7 @@ const DashboardPage: FC<DashboardPageProps> = () => {
                         onClick={() => {
                             setDeleteModalOpen(true);
                         }}
+                        className="trashcan-button"
                     >
                         <TrashcanIcon stroke="#fff" sx={{ width: "20px", height: "20px" }} />
                     </Button>

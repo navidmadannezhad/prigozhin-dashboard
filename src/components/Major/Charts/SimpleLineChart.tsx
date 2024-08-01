@@ -12,7 +12,8 @@ const SimpleLineChart: FC<SimpleLineChartProps> = (props) => {
 
   return (
     <div style={{ width: "100%" }}>
-      <LineChart
+      <LineChart 
+        className="simple-line-chart"
         xAxis={[{ 
           data: [
             "فروردین",

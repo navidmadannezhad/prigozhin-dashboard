@@ -23,6 +23,7 @@ const Layout: FC<Props> = ({ children }) => {
                 },
                 backgroundColor: theme => theme.palette.secondary.ultraLight
             }}
+            id="layout"
         >
             {belowLg ? (
                 <Grid item xs={12}>

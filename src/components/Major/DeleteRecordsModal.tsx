@@ -16,7 +16,7 @@ const DeleteRecordsModal: FC<DeleteRecordsModalProps> = (props) => {
 
     return(
         <ModalWrapper open={props.open} setOpen={props.setOpen}>
-            <Grid container flexDirection="column" gap={2}>
+            <Grid container flexDirection="column" gap={2} className="delete-records-modal">
                 <Grid container justifyContent="space-between">
                     <IconWrapper>
                         <TrashcanIcon 
